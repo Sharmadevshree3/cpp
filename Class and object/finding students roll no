@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a;
+    string d, yes, no;
+    cout<<"enter the number of students: ";
+cin>>a;
+int rollno[a];
+    cout<<"enter the students roll numbeer: ";
+    for(int i=0; i<a; i++)
+    {
+        cin>>rollno[i];
+    }
+    int b;
+    cout<<"enter the roll number you want to find: ";
+    cin>>b;
+     
+    bool found=false;
+    for(int i=0;i<a;i++ ){
+        if(b==rollno[i]){
+            found=true;
+            cout<<"roll number found at index position: "<<i<<endl;
+            break;
+        }
+    }
+    if(!found){
+        cout<<"not found, Re-enter the roll number: ";
+        cin>>b;
+        
+        bool found=false;
+    for(int i=0;i<a;i++ ){
+        if(b==rollno[i]){
+            found=true;
+            cout<<"roll number found at index position: "<<i<<endl;
+            break;
+        }
+    }
+    if(!found){
+        cout<<"not found, Re-enter the roll number: ";
+        cin>>b;
+    }
+        
+    }
+    
+    return 0;
+}
