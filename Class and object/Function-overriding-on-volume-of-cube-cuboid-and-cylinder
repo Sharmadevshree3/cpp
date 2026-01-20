@@ -1,0 +1,38 @@
+# Function-overriding-on-volume-of-cube-cuboid-and-cylinder
+#include <iostream>
+#include <string>
+using namespace std;
+
+class area
+{
+    private:
+    int volume_of_cube,volume_of_cylinder,volume_of_cuboid;
+    int a,l,b,r,h;
+    
+    public:
+    void show(int a)
+    {
+        volume_of_cube=a*a*a;
+        cout<<"volume of cube is "<<volume_of_cube<<endl;
+    }
+    void show(float r, float h)
+    {
+        volume_of_cylinder=3.14*r*r*h;
+        cout<<"volume of cylinder is "<<volume_of_cylinder<<endl;
+    }
+    void show(int l,int b,int h)
+    {
+        volume_of_cuboid=l*b*h;
+        cout<<"volume of cuboid is "<<volume_of_cuboid<<endl;
+    }
+};
+
+int main()
+{
+    area a;
+    a.show(3);
+    a.show(4,2);
+    a.show(2,3,4);
+
+    return 0;
+}
