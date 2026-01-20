@@ -1,0 +1,95 @@
+# Hierarichal-Inheritance-code-on-smart-devices
+#include <iostream>
+#include <string>
+using namespace std;
+
+class smart_device
+{
+    private:
+    string password;
+    
+    public:
+    void connect()
+    {
+       cout<<"enter your alphabetic password to connect your device: "<<endl;
+       cin>>password;
+    }
+};
+
+class TV: public smart_device
+{
+    private:
+    string content;
+    string device = "smart TV"; 
+
+    public:
+    void smart_tv()
+    {
+        if (device == "smart TV")
+        {
+            cout << "what type of content do you want to watch: " << endl;
+            cin>>content;
+        }
+        
+        cout<<"your content is displayed"<<endl; 
+    }
+};
+
+class phone: public smart_device
+{
+   private:
+   int number[10];
+   string device = "smart phone"; 
+
+   public:
+   int dial()
+   {
+       if(device=="smart phone")
+       {
+           cout<<"dial the number you want to call: "<<endl;
+               cin>>number[10];
+       }
+       
+       cout<<"the number dialed is valid we are making the call"<<endl;
+       
+       return 0;
+   }
+};
+
+class watch: public smart_device
+{
+    private:
+    int step_count;              
+    string device = "smart watch"; 
+
+    public:
+   int steps()
+   {
+       if(device=="smart watch")
+       {
+           cout<<"dial the number of steps you want to walk: "<<endl;
+           cin>>step_count;     
+       }
+       
+       cout<<"we wish you a safe walk"<<endl;
+       
+       return 0;
+   }
+};
+
+int main()
+{
+    watch c;
+    c.connect();
+    c.steps();
+    
+    phone b;
+    b.connect();
+    b.dial();
+    
+    TV a;
+    a.connect();
+    a.smart_tv();
+
+    return 0;
+}
